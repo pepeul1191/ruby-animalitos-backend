@@ -1,8 +1,8 @@
-source "http://rubygems.org"
+source 'http://rubygems.org'
 
-gem "sinatra"
-gem "puma"
-gem "sqlite3"
-gem "json"
-gem "rerun"
-gem "sequel"
+gem 'sinatra'
+gem 'puma'
+gem 'sqlite3'
+gem 'json'
+gem 'rerun'
+gem 'sequel'
