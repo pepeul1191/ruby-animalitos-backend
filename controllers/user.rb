@@ -12,5 +12,4 @@ class MyApp < Sinatra::Base
     redirect to('/')
     erb :index
   end
-
 end
