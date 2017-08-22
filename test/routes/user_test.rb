@@ -3,11 +3,11 @@ require_relative '../test_helper'
 require 'test/unit'
 require 'rack/test'
 
-class MyAppTest < Test::Unit::TestCase
+class AppAnimalitosTest < Test::Unit::TestCase
   include Rack::Test::Methods
 
   def app
-    MyApp.new
+    AppAnimalitos.new
   end
 
   def test_root

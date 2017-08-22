@@ -1,5 +1,5 @@
 # -*- encoding : utf-8 -*-
-class MyApp < Sinatra::Base
+class AppAnimalitos < Sinatra::Base
   get '/departamento/listar' do
     rpta = Array.new
     Departamento.all.each { |r| rpta.push(r.values) }

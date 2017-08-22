@@ -1,7 +1,7 @@
 require 'sinatra/base'
 require_relative 'config/database'
 
-class MyApp < Sinatra::Base
+class AppAnimalitos < Sinatra::Base
   enable :method_override
   enable :sessions
   set :session_secret, 'super secret'

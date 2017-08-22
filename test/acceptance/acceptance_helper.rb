@@ -8,7 +8,7 @@ module AcceptanceHelper
   require 'capybara/dsl' # for Capybara
   include Capybara::DSL # for visit method
 
-  Capybara.app = MyApp
+  Capybara.app = AppAnimalitos
   Capybara.javascript_driver = :webkit
 end
 

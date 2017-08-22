@@ -1,3 +1,5 @@
 doc
 .yardoc
 tags
+.DS_Store
+Gemfile.lock

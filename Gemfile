@@ -2,7 +2,7 @@ source 'http://rubygems.org'
 
 gem 'sinatra'
 gem 'puma'
-gem 'sqlite3'
+gem 'mysql2'
 gem 'json'
 gem 'rerun'
 gem 'sequel'
