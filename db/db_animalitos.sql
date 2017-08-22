@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 22-08-2017 a las 18:27:25
+-- Tiempo de generación: 22-08-2017 a las 18:38:48
 -- Versión del servidor: 5.7.19-0ubuntu0.16.04.1
--- Versión de PHP: 7.0.18-0ubuntu0.16.04.1
+-- Versión de PHP: 7.0.22-0ubuntu0.16.04.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -1937,6 +1937,15 @@ CREATE TABLE `estado_usuarios` (
   `nombre` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Volcado de datos para la tabla `estado_usuarios`
+--
+
+INSERT INTO `estado_usuarios` (`id`, `nombre`) VALUES
+(1, 'activo'),
+(2, 'suspendido'),
+(3, 'activacion pendiente');
+
 -- --------------------------------------------------------
 
 --
@@ -2307,7 +2316,7 @@ ALTER TABLE `distritos`
 -- AUTO_INCREMENT de la tabla `estado_usuarios`
 --
 ALTER TABLE `estado_usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT de la tabla `mascotas`
 --
