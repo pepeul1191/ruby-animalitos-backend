@@ -11,8 +11,9 @@ Instalación de dependencias:
   
 ### Rutas
 
-+ GET /estado_usuario/listar ->EstadoUsuarioHandler#listar
--+POST /item/guardar ->Controller_Item#guardar
++ GET /distrito/buscar ->DistritoController#buscar
++ POST /criador/correo_repetido -> CriadorController#correo_repetido
++ POST /usuario/validar->UsuarioController#validar
 
 ### Fuentes externas:
 

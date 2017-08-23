@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 22-08-2017 a las 18:38:48
+-- Tiempo de generación: 22-08-2017 a las 20:33:15
 -- Versión del servidor: 5.7.19-0ubuntu0.16.04.1
 -- Versión de PHP: 7.0.22-0ubuntu0.16.04.1
 
@@ -34,6 +34,13 @@ CREATE TABLE `criadores` (
   `telefonos` varchar(40) NOT NULL,
   `usuario_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `criadores`
+--
+
+INSERT INTO `criadores` (`id`, `nombres`, `apellidos`, `correo`, `telefonos`, `usuario_id`) VALUES
+(1, 'Pepe', 'Valdivia Caballero', 'jvaldivia@softweb.pe', '987731975', 1);
 
 -- --------------------------------------------------------
 
@@ -2209,6 +2216,14 @@ CREATE TABLE `usuarios` (
   `estado_usuario_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Volcado de datos para la tabla `usuarios`
+--
+
+INSERT INTO `usuarios` (`id`, `usuario`, `contrasenia`, `estado_usuario_id`) VALUES
+(1, 'pepe', 'kiki123', 3),
+(2, 'yacky', 'koki123', 1);
+
 -- --------------------------------------------------------
 
 --
@@ -2301,7 +2316,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `criadores`
 --
 ALTER TABLE `criadores`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT de la tabla `departamentos`
 --
@@ -2341,7 +2356,7 @@ ALTER TABLE `tipo_mascotas`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- Restricciones para tablas volcadas
 --
@@ -2369,7 +2384,7 @@ ALTER TABLE `razas`
 -- Filtros para la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  ADD CONSTRAINT `usuarios_ibfk_1` FOREIGN KEY (`estado_usuario_id`) REFERENCES `usuarios` (`id`);
+  ADD CONSTRAINT `usuarios_ibfk_1` FOREIGN KEY (`estado_usuario_id`) REFERENCES `estado_usuarios` (`id`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
