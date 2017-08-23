@@ -2,12 +2,16 @@
 
 Requisitos de software previamente instalado:
 
-  + Ruby 2.3.1
-  + MySQL
++ Ruby 2.3.1
++ MySQL
 
 Instalación de dependencias:
 
-  $  bundler install
+	$  bundler install
+
+Correr el servicio:
+
+	$ rerun "puma -p 4000"
   
 ### Rutas
 
