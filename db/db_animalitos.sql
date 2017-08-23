@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 22-08-2017 a las 20:33:15
+-- Tiempo de generación: 22-08-2017 a las 20:56:06
 -- Versión del servidor: 5.7.19-0ubuntu0.16.04.1
 -- Versión de PHP: 7.0.22-0ubuntu0.16.04.1
 
@@ -19,6 +19,22 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `db_animalitos`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `correos`
+--
+
+CREATE TABLE `correos` (
+  `id` int(11) NOT NULL,
+  `nombres` varchar(30) NOT NULL,
+  `apellidos` varchar(30) NOT NULL,
+  `correo` varchar(30) NOT NULL,
+  `telefono` varchar(30) NOT NULL,
+  `mensaje` text NOT NULL,
+  `momento` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -2248,6 +2264,12 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 --
 
 --
+-- Indices de la tabla `correos`
+--
+ALTER TABLE `correos`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indices de la tabla `criadores`
 --
 ALTER TABLE `criadores`
@@ -2312,6 +2334,11 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
+--
+-- AUTO_INCREMENT de la tabla `correos`
+--
+ALTER TABLE `correos`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT de la tabla `criadores`
 --
