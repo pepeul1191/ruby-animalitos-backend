@@ -15,4 +15,12 @@ class AppAnimalitos < Sinatra::Base
 		end
 		rpta.to_json
   end
+
+  post '/usuario/correo_repetido' do
+		Criador.where(:correo => params['correo']).count.to_s
+  	end
+
+  post '/usuario/nombre_repetido' do
+		Usuario.where(:usuario => params['usuario']).count.to_s
+  	end
 end

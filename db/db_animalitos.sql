@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 22-08-2017 a las 20:56:06
+-- Tiempo de generación: 24-08-2017 a las 14:05:44
 -- Versión del servidor: 5.7.19-0ubuntu0.16.04.1
 -- Versión de PHP: 7.0.22-0ubuntu0.16.04.1
 
@@ -46,7 +46,6 @@ CREATE TABLE `criadores` (
   `id` int(11) NOT NULL,
   `nombres` varchar(40) NOT NULL,
   `apellidos` varchar(40) NOT NULL,
-  `correo` varchar(40) NOT NULL,
   `telefonos` varchar(40) NOT NULL,
   `usuario_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -55,8 +54,8 @@ CREATE TABLE `criadores` (
 -- Volcado de datos para la tabla `criadores`
 --
 
-INSERT INTO `criadores` (`id`, `nombres`, `apellidos`, `correo`, `telefonos`, `usuario_id`) VALUES
-(1, 'Pepe', 'Valdivia Caballero', 'jvaldivia@softweb.pe', '987731975', 1);
+INSERT INTO `criadores` (`id`, `nombres`, `apellidos`, `telefonos`, `usuario_id`) VALUES
+(1, 'Pepe', 'Valdivia Caballero', '987731975', 1);
 
 -- --------------------------------------------------------
 
@@ -2229,6 +2228,7 @@ CREATE TABLE `usuarios` (
   `id` int(11) NOT NULL,
   `usuario` varchar(30) NOT NULL,
   `contrasenia` varchar(50) NOT NULL,
+  `correo` varchar(45) NOT NULL,
   `estado_usuario_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -2236,9 +2236,9 @@ CREATE TABLE `usuarios` (
 -- Volcado de datos para la tabla `usuarios`
 --
 
-INSERT INTO `usuarios` (`id`, `usuario`, `contrasenia`, `estado_usuario_id`) VALUES
-(1, 'pepe', 'kiki123', 3),
-(2, 'yacky', 'koki123', 1);
+INSERT INTO `usuarios` (`id`, `usuario`, `contrasenia`, `correo`, `estado_usuario_id`) VALUES
+(1, 'pepe', 'kiki123', 'jvaldivia@softweb.pe', 3),
+(2, 'yacky', 'koki123', 'yacky@disenoreal.com', 1);
 
 -- --------------------------------------------------------
 
