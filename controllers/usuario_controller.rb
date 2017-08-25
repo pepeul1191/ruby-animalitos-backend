@@ -14,13 +14,25 @@ class AppAnimalitos < Sinatra::Base
 			rpta = {:existe => 'no'}
 		end
 		rpta.to_json
-  end
+	 end
 
-  post '/usuario/correo_repetido' do
-		Criador.where(:correo => params['correo']).count.to_s
-  	end
+	 post '/usuario/correo_repetido' do
+		Usuario.where(:correo => params['correo']).count.to_s
+	end
 
-  post '/usuario/nombre_repetido' do
+	 post '/usuario/nombre_repetido' do
 		Usuario.where(:usuario => params['usuario']).count.to_s
-  	end
+	end
+
+	post '/usuario/crear' do
+		 usuario = JSON.parse(params['data'])
+	     begin  
+			id_generado = Usuario.insert(:usuario => usuario['usuario'], :contrasenia => usuario['contrasenia'], :correo => usuario['correo'],  :estado_usuario_id => 3)
+			rpta = { :tipo_mensaje => 'success',  :mensaje => 'Usuario registrado con éxito', :usuario_id =>  id_generado}.to_json
+	    	rescue StandardError => e 
+	    		status 500
+	    		rpta = { :tipo_mensaje => 'error', :mensaje => ['Se ha producido un error al crear el usuario', e] }.to_json
+	    end
+		 rpta
+	end
 end

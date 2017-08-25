@@ -10,6 +10,10 @@ class AppAnimalitos < Sinatra::Base
     headers['server'] = 'Ruby, Ubuntu'
   end
 
+  get '/test/conexion' do
+    'hola mundo'
+  end
+
   configure do
     set :app_file, __FILE__
   end
