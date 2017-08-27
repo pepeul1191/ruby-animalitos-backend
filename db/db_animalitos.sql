@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 24-08-2017 a las 14:05:44
+-- Tiempo de generación: 26-08-2017 a las 22:34:55
 -- Versión del servidor: 5.7.19-0ubuntu0.16.04.1
 -- Versión de PHP: 7.0.22-0ubuntu0.16.04.1
 
@@ -30,7 +30,7 @@ CREATE TABLE `correos` (
   `id` int(11) NOT NULL,
   `nombres` varchar(30) NOT NULL,
   `apellidos` varchar(30) NOT NULL,
-  `correo` varchar(30) NOT NULL,
+  `correo` varchar(60) NOT NULL,
   `telefono` varchar(30) NOT NULL,
   `mensaje` text NOT NULL,
   `momento` datetime NOT NULL
@@ -2238,7 +2238,8 @@ CREATE TABLE `usuarios` (
 
 INSERT INTO `usuarios` (`id`, `usuario`, `contrasenia`, `correo`, `estado_usuario_id`) VALUES
 (1, 'pepe', 'kiki123', 'jvaldivia@softweb.pe', 3),
-(2, 'yacky', 'koki123', 'yacky@disenoreal.com', 1);
+(2, 'yacky', 'koki123', 'yacky@disenoreal.com', 1),
+(3, 'pepex', '123', 'jaav@afpsdfa.com', 3);
 
 -- --------------------------------------------------------
 
@@ -2383,7 +2384,7 @@ ALTER TABLE `tipo_mascotas`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 --
 -- Restricciones para tablas volcadas
 --
