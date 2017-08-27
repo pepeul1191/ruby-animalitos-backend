@@ -15,8 +15,10 @@ Correr el servicio:
   
 ### Rutas
 
++ POST /correo/mandar -> CorreoController#mandar
 + GET /distrito/buscar ->DistritoController#buscar
-+ POST /criador/correo_repetido -> CriadorController#correo_repetido
++ POST /usuario/crear->UsuarioController#crear
++ POST /usuario/correo_repetido -> CriadorController#correo_repetido
 + POST /usuario/validar->UsuarioController#validar
 
 ### Fuentes externas:
