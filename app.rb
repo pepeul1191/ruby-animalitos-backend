@@ -37,12 +37,7 @@ Dir[File.dirname(__FILE__) + "/helpers/*.rb"].each do |file|
   require file
 end
 
-# Load up all models next
-Dir[File.dirname(__FILE__) + "/models/*.rb"].each do |file| 
-  require file
-end
-
 # Load up all controllers last
-Dir[File.dirname(__FILE__) + "/controllers/*.rb"].each do |file| 
+Dir[File.dirname(__FILE__) + "/handlers/*.rb"].each do |file| 
   require file
 end

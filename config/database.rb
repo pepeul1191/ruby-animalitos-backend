@@ -2,7 +2,7 @@
 require 'mysql2'
 require 'sequel'
 
-Sequel::Model.db= Sequel.connect(
+DB= Sequel.connect(
 	:adapter => 'mysql2',
    :host => '192.168.1.9',
    :username => 'remote',
