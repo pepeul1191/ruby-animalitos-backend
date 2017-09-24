@@ -4,8 +4,8 @@ require 'sequel'
 
 DB= Sequel.connect(
 	:adapter => 'mysql2',
-   :host => '192.168.1.9',
-   :username => 'remote',
+   :host => '127.0.0.1',
+   :username => 'root',
    :password => '123',
    :dbname => 'db_animalitos',
    :max_connections => 30

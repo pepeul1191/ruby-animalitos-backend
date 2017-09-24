@@ -4,10 +4,14 @@ require_relative 'config/database'
 class AppAnimalitos < Sinatra::Base
   enable :method_override
   enable :sessions
+  disable :protection
   set :session_secret, 'super secret'
 
   before do
-    headers['server'] = 'Ruby, Ubuntu'
+        headers['Access-Control-Allow-Origin'] = '*'
+        headers['Access-Control-Allow-Methods'] = 'POST, GET, OPTIONS'
+        #headers['Content-type'] = 'text/html; charset=UTF-8'
+        headers['server'] = 'Ruby, Ubuntu'
   end
 
   get '/test/conexion' do
